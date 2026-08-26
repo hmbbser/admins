@@ -1,0 +1,93 @@
+Log:
+  Level: warning # Log level: none, error, warning, info, debug
+  AccessPath: # /etc/XrayR/access.Log
+  ErrorPath: # /etc/XrayR/error.log
+DnsConfigPath: # /etc/XrayR/dns.json # Path to dns config, check https://xtls.github.io/config/dns.html for help
+RouteConfigPath: # /etc/XrayR/route.json # Path to route config, check https://xtls.github.io/config/routing.html for help
+InboundConfigPath: # /etc/XrayR/custom_inbound.json # Path to custom inbound config, check https://xtls.github.io/config/inbound.html for help
+OutboundConfigPath: # /etc/XrayR/custom_outbound.json # Path to custom outbound config, check https://xtls.github.io/config/outbound.html for help
+ConnectionConfig:
+  Handshake: 4 # Handshake time limit, Second
+  ConnIdle: 30 # Connection idle time limit, Second
+  UplinkOnly: 2 # Time limit when the connection downstream is closed, Second
+  DownlinkOnly: 4 # Time limit when the connection is closed after the uplink is closed, Second
+  BufferSize: 64 # The internal cache size of each connection, kB
+Nodes:
+  -
+    PanelType: "NewV2board"
+    ApiConfig:
+      ApiHost: "https://dsughoie.134555.xyz"
+      ApiKey: "nbairport202306302"
+      NodeID: 100
+      NodeType: V2ray
+      Timeout: 30
+      EnableVless: true
+      VlessFlow: "xtls-rprx-vision"
+      SpeedLimit: 0
+      DeviceLimit: 0
+    ControllerConfig:
+      ListenIP: 0.0.0.0
+      SendIP: 0.0.0.0
+      UpdatePeriodic: 60
+      EnableDNS: false
+      DNSType: AsIs
+      DisableUploadTraffic: false
+      DisableGetRule: false
+      DisableSniffing: false
+      EnableProxyProtocol: false
+      EnableFallback: false
+      DisableLocalREALITYConfig: true
+      EnableREALITY: false
+      REALITYConfigs:
+        Show: true
+        Dest: www.apple.com:443
+        ProxyProtocolVer: 0
+        ServerNames:
+          - www.apple.com
+        PrivateKey: U7W1SacJHf1cz8U_lkIiqXj5S8gewQkRlPcSW4mJVpw
+        MinClientVer: ""
+        MaxClientVer: ""
+        MaxTimeDiff: 0
+        ShortIds:
+          - e38ab7b48c
+      CertConfig:
+        CertMode: none
+  -
+    PanelType: "NewV2board"
+    ApiConfig:
+      ApiHost: "https://hry-houtai.trillionproducts.eu.org"
+      ApiKey: "AAbbcc54654555aaa"
+      NodeID: 100
+      NodeType: V2ray
+      Timeout: 30
+      EnableVless: true
+      VlessFlow: "xtls-rprx-vision"
+      SpeedLimit: 0
+      DeviceLimit: 0
+    ControllerConfig:
+      ListenIP: 0.0.0.0
+      SendIP: 0.0.0.0
+      UpdatePeriodic: 60
+      EnableDNS: false
+      DNSType: AsIs
+      DisableUploadTraffic: false
+      DisableGetRule: false
+      DisableSniffing: false
+      EnableProxyProtocol: false
+      EnableFallback: false
+      DisableLocalREALITYConfig: true
+      EnableREALITY: false
+      REALITYConfigs:
+        Show: true
+        Dest: www.apple.com:443
+        ProxyProtocolVer: 0
+        ServerNames:
+          - www.apple.com
+        PrivateKey: xSthYn_ex2_YXhxWQkVPKTg4s7Z4v0fu_HlHO5mjkcI
+        MinClientVer: ""
+        MaxClientVer: ""
+        MaxTimeDiff: 0
+        ShortIds:
+          - 65d8bda2101c15a6
+      CertConfig:
+        CertMode: none
